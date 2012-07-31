@@ -1,0 +1,20 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+  ok: OK
+  cancel: Cancel
+  upload: Upload
+  new_records: new records
+  updated_records: updated records
+  deleted_records: deleted records
+  add: Add
+  new_phone_number: New phone number
+  name: Name
+  phone_number: Phone number
+  no_phones_present: No numbers known
+  search: Search
+  record_added: Record has been added
+  record_updated: Record has been updated
+  record_removed: Record has been removed
+  number_added: New number has been added

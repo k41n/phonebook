@@ -1,0 +1,6 @@
+jQuery('#upload_form').remove()
+jQuery('#upload_form_placeholder').html("<div id='success'>#{j(render :partial => 'upload_statistics')}</div>")
+setTimeout(function(){
+jQuery('#success').remove()
+}, 5000)
+jQuery('#people').html("#{j(render Person.all)}")

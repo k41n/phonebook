@@ -1,0 +1,5 @@
+jQuery('#person_#{@person.id}').replaceWith("#{j(render @person)}")
+jQuery('#person_#{@person.id}').append("<div id='warning'>Number has been removed</div>")
+setTimeout(function(){
+jQuery('#warning').remove()
+}, 5000)

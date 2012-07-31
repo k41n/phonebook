@@ -1,0 +1,13 @@
+%h2
+  Phonebook
+#rest  
+  = button_link('download_box.png', 'Download for sync', gettext_people_path, false)
+  = button_link('upload_box.png','Upload sync', puttext_people_path)
+  = button_link('blue_plus.png','Add new record', new_person_path)
+  = form_tag search_people_path, id: 'search', remote: true do
+    = label_tag :therm, t(:search)
+    = text_field_tag :therm, '', onkeyup: 'delayed_search(jQuery(this))'
+  #upload_form_placeholder
+  #new_form_placeholder
+  #people
+    = render Person.all

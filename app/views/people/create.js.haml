@@ -1,0 +1,11 @@
+- if @person.valid?
+  jQuery('#new_person').remove();
+  - if @new
+    jQuery('#people').prepend("#{j(render @person)}")
+    = show_success(t(:record_added))
+  - else
+    jQuery('#person_#{@person.id}').replaceWith("#{j(render @person)}")
+    = show_success(t(:record_updated))
+- else
+  = show_error(@person.errors.full_messages.join('<br/'.html_safe))
+

@@ -1,0 +1,6 @@
+- if @phone_number.valid?
+  jQuery('#new_number_form_placeholder').html('')
+  jQuery('#person_#{@person.id}').replaceWith("#{j(render :partial=>'people/person', :object=> @person)}")
+  = show_success(t(:number_added))
+- else
+  = show_error(@phone_number.errors.full_messages.join('<br/'.html_safe))

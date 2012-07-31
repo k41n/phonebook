@@ -1,0 +1,12 @@
+.person{:id => "person_#{person.id}"}
+  .name
+    = link_to image_tag('multiply_blue.png'), person_path(person), :id=>"delete_person_#{person.id}", method: :delete, data: {confirm: 'Sure destroy this record?'}, remote: true
+    = best_in_place person, :name, ok_button: t(:ok), cancel_button: t(:cancel)
+  .phone_numbers
+    = link_to image_tag('blue_plus.png', :size=>'24x24'), new_person_phone_number_path(person), remote: true, id: "add_number_for_#{person.id}"
+    - if person.phone_numbers.count > 0
+      = render person.phone_numbers
+    - else
+      = t(:no_phones_present)
+  %div{:id => "new_number_form_placeholder_#{person.id}"}
+

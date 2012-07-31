@@ -1,0 +1,8 @@
+= form_for @person, remote: true do |form|
+  = form.label :name, t(:name)
+  = form.text_field :name
+  %br
+  = label_tag :phone_number, t(:phone_number)
+  = text_field_tag :phone_number
+  %br
+  = form.submit t(:add)
