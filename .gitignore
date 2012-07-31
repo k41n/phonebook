@@ -14,9 +14,7 @@
 /log/*.log
 /tmp
 config/deploy.rb
-config/unicorn.rb
 config/database.yml.erb
-config/production.pill
 *.rbc
 *.sassc
 .sass-cache

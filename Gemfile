@@ -29,5 +29,5 @@ gem 'best_in_place'
 gem "remotipart", "~> 1.0"
 
 gem 'unicorn'
-gem 'capistrano'
+gem 'rvm-capistrano'
 gem 'simplecov'
